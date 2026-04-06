@@ -23,7 +23,7 @@ class Manacher {
 
         }
 
-        int runManacher(){
+        string runManacher(){
             int l=0;
             int r=0;
 
@@ -56,7 +56,7 @@ class Manacher {
                     toRet+=s[j];
                 }
             }
-            return toRet.size();
+            return toRet;
         }
 };
 
