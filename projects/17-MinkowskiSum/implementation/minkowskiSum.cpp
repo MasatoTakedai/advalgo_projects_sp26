@@ -87,23 +87,25 @@ vector<point> minkowskiSum(vector<point>& polyA, vector<point>& polyB) {
 }
 
 int main() {
+    // Read both polynomials in
     int n, m;
     cin >> n >> m;
-    vector<point> a;
+    vector<point> polyA;
     for (int i=0; i < n; i++) {
         double x, y;
         cin >> x >> y;
-        a.emplace_back(x, y);
+        polyA.emplace_back(x, y);
     }
-    vector<point> b;
+    vector<point> polyB;
     for (int i=0; i < m; i++) {
         double x, y;
         cin >> x >> y;
-        b.emplace_back(x, y);
+        polyB.emplace_back(x, y);
     }
 
-    vector<point> c = minkowskiSum(a, b);
-    for (auto& p : c) {
+    // Get sum
+    vector<point> polySum = minkowskiSum(polyA, polyB);
+    for (auto& p : polySum) {
         cout << p.x << ' ' << p.y << endl;
     }
     cout << endl;
